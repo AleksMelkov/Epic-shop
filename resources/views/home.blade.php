@@ -29,7 +29,7 @@ use App\User;
                 @endif
             </div>
         </div>
-        <div id="resultWrapper" class="col-9 userInfo" userId={{  Auth::user()->id }}>
+        <div id="resultWrapper" class="col-10 userInfo" userId={{  Auth::user()->id }}>
             <div class="row row_hello_user ">
                 <div class="col personalCabHeader">Личные данные</div>
             </div>

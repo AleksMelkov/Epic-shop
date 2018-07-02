@@ -22,13 +22,13 @@
 }
 .userInfo .personalCabHeader {
     text-align: left;
-    padding: 0px;
+    padding: 0 0 0 15px;
 }
 .personalCabHeaderRow .col-9 {
     height: 0px;
 }
 .userInfo {
-    padding-left: 30px;
+    padding: 0 15px 0 0;
     top:-42px;
 }
 .row_hello_user {
