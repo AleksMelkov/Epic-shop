@@ -147,13 +147,13 @@ class ClientsController extends Controller
                     $html .= '</div>';
                     $html .= '</div>';
                 } else {
-                    $html .= '<div class="row clientsTableRow" id="clientsTableRow-'.$user->id.'">';
+                    $html .= '<div class="row clientsTableRow adminPanelTableRow" id="clientsTableRow-'.$user->id.'">';
                     $html .= '<div class="col-1 clientsTableCol clientsTableChecker">';
                     $html .= '<div class="form-check">';
                     $html .= '<input class="form-check-input clientsTableChecker" type="checkbox" id="clientsTableChecker-'.$user->id.'" userId="'.$user->id.'">';
                     $html .= '</div>';
                     $html .= '</div>';
-                    $html .= '<div class="col-1 clientsTableCol clientsTableNickName">'.$user->name.'</div>';
+                    $html .= '<div class="col-1 adminPanelTableCol clientsTableNickName">'.$user->name.'</div>';
                     $html .= '<div class="col-2 clientsTableCol clientsTableFirstName">'.$user->first_name.'</div>';
                     $html .= '<div class="col-2 clientsTableCol clientsTableLastName">'.$user->last_name.'</div>';
                     $html .= '<div class="col-2 clientsTableCol clientsTablePhone">'.$user->phone_number.'</div>';

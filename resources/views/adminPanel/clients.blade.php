@@ -67,5 +67,6 @@
         </div>
     </div>
 </div>
+<script src="{{ asset('js/admin/common.js') }}" defer></script>
 <script src="{{ asset('js/admin/client/clients.js') }}" defer></script>
 <script src="{{ asset('js/admin/client/clientsLiveSearch.js') }}" defer></script>
