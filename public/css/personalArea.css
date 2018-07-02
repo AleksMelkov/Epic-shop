@@ -3,6 +3,7 @@
 }
 .btnMenu .btn-secondary {
     background-color:#8C8C8C;
+    box-shadow: none!important;
 }
 .btnMenu .btn-secondary:hover {
     background-color:#454545;
