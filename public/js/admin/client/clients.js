@@ -1,25 +1,4 @@
 $( document ).ready(function() {
-
-    $('.clientsTableRow').click(function () {
-        if ($(this).find('.form-check-input').prop("checked")) {
-            $(this).find('.form-check-input').prop("checked", false);
-            $(this).css('background-color', 'transparent');
-        } else {
-            $(this).css('background-color', '#d4d4d4');
-            $(this).find('.form-check-input').prop("checked", true);
-        }
-    });
-
-    $('#clientsTableChecker-all').click(function () {
-        if ($(this).prop("checked")) {
-            $('.clientsTableRow .clientsTableChecker').prop("checked", true);
-            $('.clientsTableRow').css('background-color', '#d4d4d4');
-        } else {
-            $('.clientsTableRow .clientsTableChecker').prop("checked", false);
-            $('.clientsTableRow').css('background-color', 'transparent');
-        }
-    });
-
     $.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')

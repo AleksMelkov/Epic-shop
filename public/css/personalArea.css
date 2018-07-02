@@ -15,16 +15,6 @@
     color: #454545;
     text-align: center!important;
 }
-.personalCabHeader {
-    padding: 10px 0px;
-    text-transform: uppercase;
-    font-size: 20px;
-    text-align: center;
-}
-.userInfo .personalCabHeader {
-    text-align: left;
-    padding: 0 0 0 15px;
-}
 .personalCabHeaderRow .col-9 {
     height: 0px;
 }
@@ -50,46 +40,6 @@
 .clientCabHeader {
     padding-bottom: 10px;
 }
-.clientsTableHeader,
-.couponsTableHeader {
-    padding: 15px 0;
-    background-color: #8C8C8C;
-    border-radius: 5px 5px 0 0;
-}
-.clientCabSearch {
-    text-align: right;
-    padding-bottom: 15px;
-}
-.clientsTableHeader .clientsTableHeaderNickName, .couponsTableHeader .couponsTableHeaderChecker,
-.clientsTableHeader .clientsTableHeaderFirstName,.couponsTableHeader .couponsTableHeaderNickName,
-.clientsTableHeader .clientsTableHeaderLastName,.couponsTableHeader .couponsTableHeaderFirstName,
-.clientsTableHeader .clientsTableHeaderPhone,.couponsTableHeader .couponsTableHeaderLastName,
-.clientsTableHeader .clientsTableHeaderEmail,.couponsTableHeader .couponsTableHeaderDiscount,
-.clientsTableHeader .clientsTableHeaderCity, .couponsTableHeader .couponsTableHeaderCity {
-    text-align: center;
-}
-.clientsTableRow .clientsTableNickName,
-.clientsTableRow .clientsTableFirstName,
-.clientsTableRow .clientsTableLastName,
-.clientsTableRow .clientsTablePhone,
-.clientsTableRow .clientsTableEmail,
-.clientsTableRow .clientsTableCity {
-    text-align: center;
-}
-.clientsTableRow {
-    padding: 5px 0px;
-    border-bottom: 1px solid #8C8C8C;
-}
-.clientsTableRow:hover {
-    background-color: #d4d4d4;
-}
-.clientsTableBottom {
-    padding: 3px 0;
-    border-bottom: 1px solid #8C8C8C;
-    border-left: 1px solid #8C8C8C;
-    border-right: 1px solid #8C8C8C;
-    border-radius: 0 0 3px 3px;
-}
 .clientsTableBottomChecker {
     padding-left: 14px;
 }
@@ -108,5 +58,3 @@
 .updateBtns {
     display: none;
 }
-
-/*Управление купонами*/

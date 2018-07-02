@@ -6,7 +6,7 @@ use App\User;
 @section('content')
 <div class="container-fluid">
     <div class="row personalCabHeaderRow">
-        <div class="col-2 personalCabHeader">Личный кабинет</div>
+        <div class="col-2 personalCabHeader tabAdminHeader">Личный кабинет</div>
         <div class="col-9"></div>
     </div>
     <div class="row">
