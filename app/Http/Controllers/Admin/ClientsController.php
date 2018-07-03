@@ -75,12 +75,8 @@ class ClientsController extends Controller
     }
     public function updateUsers (Request $request) {
         $updUsers =(array) json_decode($request->input('inputVal'));
-//        var_dump($request->input('inputVal'));
         foreach ($updUsers as $key=>$user) {
             foreach ((array) $user as $dbCol=>$updateStr) {
-//                var_dump($dbCol);
-//                echo '<br>';
-//                var_dump($updateStr);
                 DB::table('users')->where('id',$key)->update([$dbCol=>$updateStr]);
             }
         }

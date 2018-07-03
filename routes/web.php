@@ -32,9 +32,15 @@ Route::post('/couponsAdmin', 'Admin\CouponsController@index');
 Route::post('/productsAdmin', 'Admin\ProductsController@index');
 Route::post('/postsAdmin', 'Admin\PostsController@index');
 
-/*'экшены админ страницы клиенты*/
+/*экшены админ страницы клиенты*/
 Route::post('/clientsDataLiveSearch', 'Admin\ClientsController@liveSearch');
 Route::post('/clientsDataLiveSearchReset', 'Admin\ClientsController@liveSearchReset');
 Route::post('/deleteUsers', 'Admin\ClientsController@deleteUsers');
 Route::post('/updateUsersRow', 'Admin\ClientsController@updateUsersRow');
 Route::post('/updateUsers', 'Admin\ClientsController@updateUsers');
+
+/*'экшены админ страницы купоны*/
+Route::post('/updateCouponRow', 'Admin\CouponsController@updateCouponRow');
+Route::post('/updateCoupons', 'Admin\CouponsController@updateCoupons');
+Route::post('/cancelUpdateCoupons', 'Admin\CouponsController@index');
+Route::post('/addCouponsRow', 'Admin\CouponsController@addCouponsRow');

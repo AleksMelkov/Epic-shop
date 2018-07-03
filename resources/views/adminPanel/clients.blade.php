@@ -1,8 +1,6 @@
 <div class="container-fluid">
     <div class="row clientCabHeader">
-        <div class="col-1">
-
-        </div>
+        <div class="col-1"></div>
         <div class="col-11 personalCabHeader tabAdminHeader">
             Управление пользователями
         </div>
