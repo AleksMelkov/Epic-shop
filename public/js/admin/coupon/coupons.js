@@ -96,21 +96,21 @@ $( document ).ready(function() {
                 data: {'referal':this.value},
                 dataType: 'HTML',
                 success: function(data){
-                    $(".searchResultWrapper").empty();
+                    // $(".searchResultWrapper").empty();
                     $(".searchResultWrapper").html(data);
                 }
             });
-        } else if (this.value.length == 0) {
-            $.ajax({
-                url: '/clientsDataLiveSearchReset',
-                type: 'POST',
-                data: {'referal':this.value},
-                dataType: 'HTML',
-                success: function(data){
-                    $(".liveSearchResult").empty();
-                    $(".liveSearchResult").html(data);
-                }
-            });
         }
+    });
+
+    $('.searchResult').click(function () {
+        var lastName = $('#searchResultLastName').text();
+        var firstName = $('#searchResultFirstName').text();
+        var userId = $(this).attr('id');
+        $('#newCouponUserLastName').text(lastName);
+        $('#newCouponUserFirstName').text(firstName);
+        $('.adminPanelTableRowAdd').attr('userId',userId);
+        $('.searchResultWrapper').remove();
+        $('#clientCouponSearch').val('');
     });
 });

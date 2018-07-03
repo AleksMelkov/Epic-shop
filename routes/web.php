@@ -44,3 +44,4 @@ Route::post('/updateCouponRow', 'Admin\CouponsController@updateCouponRow');
 Route::post('/updateCoupons', 'Admin\CouponsController@updateCoupons');
 Route::post('/cancelUpdateCoupons', 'Admin\CouponsController@index');
 Route::post('/addCouponsRow', 'Admin\CouponsController@addCouponsRow');
+Route::post('/couponsDataLiveSearch', 'Admin\CouponsController@couponsDataLiveSearch');

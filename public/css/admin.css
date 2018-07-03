@@ -68,7 +68,6 @@
     background-color: transparent;
 }
 
-
 .searchArea {
     padding: 0;
     margin-left: 15px;
@@ -79,7 +78,6 @@
     z-index: 1000;
     border-left: 1px solid #8C8C8C;
     border-right: 1px solid #8C8C8C;
-    border-top: 1px solid #8C8C8C;
     background-color: #ffffff;
 }
 
@@ -88,8 +86,17 @@
     cursor: pointer;
 }
 
-.searchResultWrapper .searchResult .col{
+.searchResultWrapper .searchResult .searchResultCol {
     padding: 5px 0;
     text-align: center;
     border-bottom: 1px solid #8C8C8C;
+}
+.searchResultWrapper .searchResult:first-child {
+    border-top: 1px solid #8C8C8C;
+}
+#newCouponUserFirstName {
+    margin-left: -15px;
+}
+.adminPanelTableCol {
+    text-align: center;
 }

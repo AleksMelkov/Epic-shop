@@ -1,15 +1,8 @@
-<div class="row updateRow adminPanelTableRow">
+<div class="row updateRow adminPanelTableRowAdd">
     <div class="col-2 searchArea">
         <input id="clientCouponSearch" class="form-control form-control-sm" type="text" placeholder="">
         <small id="clientSearch" class="form-text text-muted">Поиск по пользователям</small>
-        <div class="container-fluid searchResultWrapper">
-            <div class="row searchResult">
-                <div class="col">dfdfdf</div>
-            </div>
-            <div class="row searchResult">
-                <div class="col">ghghgh</div>
-            </div>
-        </div>
+        <div class="container-fluid searchResultWrapper"></div>
     </div>
     <div class="col-2 adminPanelTableCol" id="newCouponUserFirstName"></div>
     <div class="col-2 adminPanelTableCol" id="newCouponUserLastName"></div>

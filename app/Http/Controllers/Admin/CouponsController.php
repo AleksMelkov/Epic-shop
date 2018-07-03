@@ -124,4 +124,20 @@ class CouponsController extends Controller
         }
         return view('adminPanel.couponsSearchAdd')->with('arResult', $arResult);
     }
+
+    public function couponsDataLiveSearch(Request $request) {
+        $users = User::where('last_name','like','%'.$request->input('referal').'%')
+            ->orWhere('first_name', 'like','%'.$request->input('referal').'%')
+            ->orWhere('name', 'like','%'.$request->input('referal').'%')
+            ->get();
+        $arResult = [];
+        foreach ($users as $user) {
+            if ($user->coupon->coupon_val == '0') {
+                $arResult[$user->id]['name'] = $user->name;
+                $arResult[$user->id]['first_name'] = $user->first_name;
+                $arResult[$user->id]['last_name'] = $user->last_name;
+            }
+        }
+        return view('adminPanel.couponsSearchRows')->with('arResult', $arResult);
+    }
 }
