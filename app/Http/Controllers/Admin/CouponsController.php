@@ -140,4 +140,24 @@ class CouponsController extends Controller
         }
         return view('adminPanel.couponsSearchRows')->with('arResult', $arResult);
     }
+
+    public function AddCoupons(Request $request) {
+        $addRows = (array) json_decode($request->input('couponAdd'));
+        foreach ($addRows as $key=>$coupon) {
+            $couponId = Coupon::where('coupon_val',$coupon)->value('id');
+            $user = User::find($key);
+            $user->coupon_id = $couponId;
+            $user->save();
+        }
+        $arResult = array();
+        $users = User::all();
+        foreach ($users as $user) {
+            $arResult[$user->id]['nickName'] = $user->name;
+            $arResult[$user->id]['first_name'] = $user->first_name;
+            $arResult[$user->id]['last_name'] = $user->last_name;
+            $arResult[$user->id]['coupon'] = $user->coupon->coupon_val;
+            $arResult[$user->id]['city'] = $user->city;
+        }
+        return view('adminPanel.coupons')->with('arResult', $arResult);
+    }
 }

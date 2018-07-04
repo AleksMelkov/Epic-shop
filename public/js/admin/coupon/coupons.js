@@ -104,13 +104,34 @@ $( document ).ready(function() {
     });
 
     $('.searchResult').click(function () {
-        var lastName = $('#searchResultLastName').text();
-        var firstName = $('#searchResultFirstName').text();
+        var lastName = $(this).find('#searchResultLastName').text();
+        var firstName = $(this).find('#searchResultFirstName').text();
         var userId = $(this).attr('id');
         $('#newCouponUserLastName').text(lastName);
         $('#newCouponUserFirstName').text(firstName);
         $('.adminPanelTableRowAdd').attr('userId',userId);
         $('.searchResultWrapper').remove();
         $('#clientCouponSearch').val('');
+    });
+
+    $('#adminPanelSaveBtn').click(function () {
+        var couponAdd = '{';
+        $('.adminPanelTableRowAdd').each(function () {
+            var userId = $(this).attr('userId');
+            var couponVal = $(this).find('.btnActive').attr('id');
+            couponAdd += '"'+userId+'":"'+couponVal+'",';
+        });
+        couponAdd = couponAdd.substring(0, couponAdd.length - 1);
+        couponAdd += '}';
+        $.ajax({
+            url: '/AddCoupons',
+            type: 'POST',
+            dataType: 'HTML',
+            data: {'couponAdd': couponAdd},
+            success: function (rezult) {
+                $('#resultWrapper').empty();
+                $('#resultWrapper').html(rezult);
+            }
+        });
     });
 });
