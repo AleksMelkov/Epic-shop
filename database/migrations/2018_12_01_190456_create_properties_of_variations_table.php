@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateVariationsTable extends Migration
+class CreatePropertiesOfVariationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateVariationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('variations', function (Blueprint $table) {
+        Schema::create('properties_of_variations', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('variation_name');
-            $table->string('variation_value');
+            $table->unsignedInteger('variation_id');
+            $table->unsignedInteger('property_id');
+            $table->string('property_value');
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateVariationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('variations');
+        Schema::dropIfExists('properties_of_variations');
     }
 }

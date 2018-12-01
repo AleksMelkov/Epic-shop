@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddFkToProductsTable extends Migration
+class CreateAddFkToProductsInStorageTableTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AddFkToProductsTable extends Migration
      */
     public function up()
     {
-        Schema::table('products', function (Blueprint $table) {
-            $table->foreign('variation_type')->references('id')->on('variation_types')->onDelete('cascade')->onUpdate('cascade');
+        Schema::table('products_in_storage', function (Blueprint $table) {
+            $table->foreign('variation_id')->references('id')->on('variations')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('storage_id')->references('id')->on('storages')->onDelete('cascade')->onUpdate('cascade');
         });
     }
@@ -26,8 +26,8 @@ class AddFkToProductsTable extends Migration
      */
     public function down()
     {
-        Schema::table('products', function (Blueprint $table) {
-            $table->dropForeign(['variation_type']);
+        Schema::table('products_in_storage', function (Blueprint $table) {
+            $table->dropForeign(['variation_id']);
             $table->dropForeign(['storage_id']);
         });
     }

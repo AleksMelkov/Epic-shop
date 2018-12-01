@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProductsToPropertiesTable extends Migration
+class CreatePropertiesOfProductsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateProductsToPropertiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('products_to_properties', function (Blueprint $table) {
+        Schema::create('properties_of_products', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('product_id');
             $table->unsignedInteger('property_id');
@@ -29,6 +29,6 @@ class CreateProductsToPropertiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('products_to_properties');
+        Schema::dropIfExists('properties_of_products');
     }
 }

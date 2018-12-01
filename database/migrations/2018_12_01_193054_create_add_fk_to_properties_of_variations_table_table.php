@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddFkToVariationTypesTable extends Migration
+class CreateAddFkToPropertiesOfVariationsTableTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class AddFkToVariationTypesTable extends Migration
      */
     public function up()
     {
-        Schema::table('variation_types', function (Blueprint $table) {
+        Schema::table('properties_of_variations', function (Blueprint $table) {
             $table->foreign('variation_id')->references('id')->on('variations')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('property_id')->references('id')->on('private_properties')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
@@ -25,8 +26,9 @@ class AddFkToVariationTypesTable extends Migration
      */
     public function down()
     {
-        Schema::table('variation_types', function (Blueprint $table) {
+        Schema::table('properties_of_variations', function (Blueprint $table) {
             $table->dropForeign(['variation_id']);
+            $table->dropForeign(['property_id']);
         });
     }
 }
